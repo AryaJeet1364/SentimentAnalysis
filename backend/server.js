@@ -4,14 +4,14 @@ const sentimentRoutes = require("./routes/sentimentRoutes");
 
 const app = express();
 
-const corsOptions = {
-  origin: "https://sentiment-analysis-new1.vercel.app", // Replace with your frontend URL
-  methods: ["GET", "POST"],
-  allowedHeaders: ["Content-Type"],
-};
+// const corsOptions = {
+//   origin: "https://sentiment-analysis-new1.vercel.app", // Replace with your frontend URL
+//   methods: ["GET", "POST"],
+//   allowedHeaders: ["Content-Type"],
+// };
 
-// app.use(cors());
-app.use(cors(corsOptions));
+app.use(cors());
+// app.use(cors(corsOptions));
 app.use(express.json());
 
 // Route for sentiment analysis
