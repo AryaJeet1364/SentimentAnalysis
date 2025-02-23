@@ -31,9 +31,6 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   build: {
     outDir: "dist",
-    rollupOptions: {
-      external: ["axios"], // Make axios external
-    },
   },
   server: {
     proxy: {
