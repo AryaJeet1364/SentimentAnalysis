@@ -4,7 +4,8 @@ from flask_cors import CORS
 
 # Initialize the Flask app
 app = Flask(__name__)
-CORS(app)
+# CORS(app)
+CORS(app, origins="https://sentiment-analysis-new1.vercel.app")  # Replace with your frontend URL
 
 # Initialize NLTK's Sentiment Intensity Analyzer
 sia = SentimentIntensityAnalyzer()
