@@ -7,9 +7,12 @@ const analyzeSentiment = async (req, res) => {
   console.log("Received text for sentiment analysis:", text);
 
   try {
-    const response = await axios.post("http://127.0.0.1:5001/analyze", {
-      text,
-    });
+    const response = await axios.post(
+      "https://sentiment-analysis-three-wheat.vercel.app/analyze",
+      {
+        text,
+      }
+    );
     console.log("Response from Python API:", response.data);
     res.json(response.data);
   } catch (error) {
