@@ -62,7 +62,7 @@
 
 
 import React, { useState } from "react";
-import axios from "axios/dist/axios.min.js";
+import axios from "axios";
 
 const SentimentAnalysis = () => {
   const [text, setText] = useState("");
